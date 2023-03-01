@@ -79,4 +79,14 @@ bool deleteV_link(LinkList list, datatype x) {
 	while (p->link != NULL && p->link->val != x) {
 		p = p->link;
 	}
+	if(p->link==NULL){
+		cout<<"no exist\n";
+		return 0;
+	}
+	else{
+		q=p->link;
+		p->link=q->link;
+		free(q);
+		return 1;
+	}
 }
