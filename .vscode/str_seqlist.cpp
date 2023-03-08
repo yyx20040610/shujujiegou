@@ -17,5 +17,6 @@ pstr createNullStr(int m){
         }
         else free(p);
     }
+    cout<<"out of space";
     return NULL;
 }
